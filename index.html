@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesión 15 — Tailwind CSS (índice de la práctica)</title>
+    <style>
+        :root { color-scheme: dark; }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #0f172a;
+            color: #e2e8f0;
+            font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+            padding: 32px 20px 56px;
+        }
+        header { max-width: 960px; margin: 0 auto 32px; }
+        .eyebrow {
+            color: #38bdf8; font-size: .8rem; font-weight: 700;
+            letter-spacing: .18em; text-transform: uppercase; margin: 0 0 12px;
+        }
+        h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin: 0 0 12px; line-height: 1.15; }
+        header p { color: #94a3b8; margin: 0; max-width: 60ch; }
+        main {
+            max-width: 960px; margin: 0 auto;
+            display: grid; gap: 16px;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        }
+        a.card {
+            display: block; text-decoration: none; color: inherit;
+            background: #1e293b; border: 1px solid #334155; border-radius: 14px;
+            padding: 18px 20px; transition: transform .15s, border-color .15s, background .15s;
+        }
+        a.card:hover, a.card:focus-visible {
+            transform: translateY(-3px); border-color: #38bdf8; background: #243449;
+            outline: none;
+        }
+        .n { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+        .num {
+            width: 26px; height: 26px; border-radius: 8px; background: #0c4a6e;
+            color: #7dd3fc; font-size: .8rem; font-weight: 700;
+            display: inline-flex; align-items: center; justify-content: center;
+        }
+        .title { font-weight: 700; font-size: 1rem; }
+        .desc { color: #94a3b8; font-size: .88rem; margin: 0; }
+        .tag {
+            display: inline-block; margin-top: 10px; font-size: .7rem; font-weight: 600;
+            padding: 3px 8px; border-radius: 999px; background: #123c2f; color: #6ee7b7;
+        }
+        .tag.net { background: #422006; color: #fcd34d; }
+        footer { max-width: 960px; margin: 40px auto 0; color: #64748b; font-size: .8rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <p class="eyebrow">UTP · Hojas de Estilo en Cascada Avanzado</p>
+        <h1>Sesión 15 — Tailwind CSS</h1>
+        <p>Ejercicios resueltos (1, 2 y 3) y propuestos (1 a 4) de la guía de práctica. Abre cada enlace en el navegador; los marcados con «CDN» necesitan internet.</p>
+    </header>
+
+    <main>
+        <a class="card" href="ej1/index.html">
+            <div class="n"><span class="num">E1</span><span class="title">Botón y tarjeta de producto</span></div>
+            <p class="desc">Utilidades de espaciado, color, sombra y variantes hover:/active: con el Play CDN.</p>
+            <span class="tag net">Play CDN — internet</span>
+        </a>
+
+        <a class="card" href="ej2/index.html">
+            <div class="n"><span class="num">E2</span><span class="title">Catálogo responsivo</span></div>
+            <p class="desc">Rejilla de 1, 2 y 3 columnas, modo oscuro con dark: y navegación que se adapta.</p>
+            <span class="tag net">Play CDN — internet</span>
+        </a>
+
+        <a class="card" href="ej3/index.html">
+            <div class="n"><span class="num">E3</span><span class="title">Tailwind CLI y color propio</span></div>
+            <p class="desc">Proyecto con npm, tailwind.config.js, color «marca» y CSS compilado en dist/output.css.</p>
+            <span class="tag">CSS ya compilado</span>
+        </a>
+
+        <a class="card" href="propuesto1/index.html">
+            <div class="n"><span class="num">P1</span><span class="title">Landing page</span></div>
+            <p class="desc">Cabecera con menú, hero con botón, tres tarjetas de servicios y pie de página.</p>
+            <span class="tag net">Play CDN — internet</span>
+        </a>
+
+        <a class="card" href="propuesto2/index.html">
+            <div class="n"><span class="num">P2</span><span class="title">Formulario de contacto</span></div>
+            <p class="desc">Campos con borde, relleno y anillo al enfocar; dos columnas desde tabletas.</p>
+            <span class="tag net">Play CDN — internet</span>
+        </a>
+
+        <a class="card" href="propuesto3/index.html">
+            <div class="n"><span class="num">P3</span><span class="title">Mismo componente, dos frameworks</span></div>
+            <p class="desc">Tarjeta en Bootstrap 5 frente a Tailwind, con tabla comparativa y conclusiones.</p>
+            <span class="tag net">Play CDN — internet</span>
+        </a>
+
+        <a class="card" href="propuesto4/index.html">
+            <div class="n"><span class="num">P4</span><span class="title">Sistema de diseño propio</span></div>
+            <p class="desc">Paleta de tres colores con dos intensidades, familia tipográfica y CSS compilado por CLI.</p>
+            <span class="tag">CSS ya compilado</span>
+        </a>
+    </main>
+
+    <footer>
+        Guía de Práctica — Sesión 15 · Docente: Antonio Arroyo Paz · Todo el diseño se construyó solo con clases de utilidad.
+    </footer>
+</body>
+</html>

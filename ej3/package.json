@@ -1,0 +1,13 @@
+{
+  "name": "sesion15-ej3-tailwind-cli",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sesion 15 - Ejercicio 3: Tailwind CSS con la herramienta de linea de comandos",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

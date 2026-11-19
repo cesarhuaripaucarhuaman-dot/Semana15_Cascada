@@ -1,0 +1,13 @@
+{
+  "name": "sesion15-propuesto4-sistema-diseno",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sesion 15 - Propuesto 4: sistema de diseno propio con Tailwind CLI",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

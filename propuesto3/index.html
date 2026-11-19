@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesto 3 - Mismo componente, dos frameworks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 text-slate-800 antialiased">
+
+    <main class="max-w-5xl mx-auto px-4 py-10">
+
+        <header class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-bold mb-3">Mismo componente, dos frameworks</h1>
+            <p class="text-slate-500 max-w-2xl mx-auto">
+                La misma tarjeta de producto construida con Bootstrap 5 (sesión 14) y con Tailwind CSS (sesión 15).
+            </p>
+        </header>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+
+            <article class="bg-white rounded-2xl shadow p-5">
+                <h2 class="text-lg font-bold mb-1">Bootstrap 5</h2>
+                <p class="text-sm text-slate-500 mb-4">
+                    Componentes listos (<code class="bg-slate-100 px-1 rounded">card</code>, <code class="bg-slate-100 px-1 rounded">btn</code>).
+                </p>
+                <iframe src="bootstrap.html" title="Tarjeta con Bootstrap" class="w-full h-80 rounded-xl border border-slate-200 bg-white"></iframe>
+                <a href="bootstrap.html" target="_blank" rel="noopener"
+                   class="inline-block mt-4 text-sm font-semibold text-emerald-700 hover:underline focus:outline-none focus:ring-2 focus:ring-emerald-400 rounded">
+                    Abrir en una pestaña nueva
+                </a>
+            </article>
+
+            <article class="bg-white rounded-2xl shadow p-5">
+                <h2 class="text-lg font-bold mb-1">Tailwind CSS</h2>
+                <p class="text-sm text-slate-500 mb-4">
+                    Utilidades combinadas en el HTML, sin clases de componente.
+                </p>
+                <iframe src="tailwind.html" title="Tarjeta con Tailwind" class="w-full h-80 rounded-xl border border-slate-200 bg-white"></iframe>
+                <a href="tailwind.html" target="_blank" rel="noopener"
+                   class="inline-block mt-4 text-sm font-semibold text-cyan-700 hover:underline focus:outline-none focus:ring-2 focus:ring-cyan-400 rounded">
+                    Abrir en una pestaña nueva
+                </a>
+            </article>
+
+        </section>
+
+        <section class="bg-white rounded-2xl shadow p-6 md:p-8">
+            <h2 class="text-2xl font-bold mb-6">Tabla comparativa</h2>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse min-w-[36rem]">
+                    <thead>
+                        <tr class="bg-slate-800 text-white">
+                            <th scope="col" class="px-4 py-3 font-semibold">Criterio</th>
+                            <th scope="col" class="px-4 py-3 font-semibold">Bootstrap 5</th>
+                            <th scope="col" class="px-4 py-3 font-semibold">Tailwind CSS</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200">
+                        <tr class="hover:bg-slate-50 transition">
+                            <th scope="row" class="px-4 py-3 font-semibold text-slate-700">Líneas de HTML de la tarjeta</th>
+                            <td class="px-4 py-3">12 líneas</td>
+                            <td class="px-4 py-3">14 líneas</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition">
+                            <th scope="row" class="px-4 py-3 font-semibold text-slate-700">CSS propio necesario</th>
+                            <td class="px-4 py-3">1 regla <code class="bg-slate-100 px-1 rounded">style</code> en línea para el degradado y la altura de la imagen</td>
+                            <td class="px-4 py-3">0 (el degradado es la utilidad <code class="bg-slate-100 px-1 rounded">bg-gradient-to-br</code>)</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition">
+                            <th scope="row" class="px-4 py-3 font-semibold text-slate-700">Personalización</th>
+                            <td class="px-4 py-3">Requiere sobrescribir variables, SCSS o reglas extra</td>
+                            <td class="px-4 py-3">Cambiar una clase: <code class="bg-slate-100 px-1 rounded">from-cyan-500</code> → <code class="bg-slate-100 px-1 rounded">from-rose-500</code></td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition">
+                            <th scope="row" class="px-4 py-3 font-semibold text-slate-700">Apariencia final</th>
+                            <td class="px-4 py-3">Idéntica: mismas esquinas, sombra y colores</td>
+                            <td class="px-4 py-3">Idéntica: mismas esquinas, sombra y colores</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition">
+                            <th scope="row" class="px-4 py-3 font-semibold text-slate-700">CSS que llega al navegador</th>
+                            <td class="px-4 py-3">Todo el framework (~230 KB) aunque uses una tarjeta</td>
+                            <td class="px-4 py-3">Solo las clases usadas si se compila con la CLI</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition">
+                            <th scope="row" class="px-4 py-3 font-semibold text-slate-700">Velocidad de desarrollo</th>
+                            <td class="px-4 py-3">Alta: componentes ya diseñados</td>
+                            <td class="px-4 py-3">Media al inicio (hay que aprender las utilidades)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-emerald-50 border-l-4 border-emerald-500 p-4 rounded-r-lg">
+                    <h3 class="font-semibold text-emerald-900 mb-1">¿Cuándo usaría Bootstrap?</h3>
+                    <p class="text-sm text-emerald-800">
+                        Proyectos con plazos cortos, paneles administrativos o equipos sin diseñador:
+                        sus componentes resuelven el 80 % del trabajo sin pensar en estilos.
+                    </p>
+                </div>
+                <div class="bg-cyan-50 border-l-4 border-cyan-500 p-4 rounded-r-lg">
+                    <h3 class="font-semibold text-cyan-900 mb-1">¿Cuándo usaría Tailwind?</h3>
+                    <p class="text-sm text-cyan-800">
+                        Productos con identidad visual propia, sistemas de diseño y apps con React/Vue:
+                        el diseño se ajusta sin pelear con los estilos del framework.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-800 text-slate-300 text-center text-sm py-4">
+        Hojas de Estilo en Cascada Avanzado — Sesión 15 — Propuesto 3
+    </footer>
+
+</body>
+</html>

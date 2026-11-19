@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propuesto 4 - Sistema de diseño propio con Tailwind CLI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="bg-tinta-100 font-sans text-tinta-900 antialiased">
+
+    <header class="bg-tinta-900 text-white">
+        <div class="max-w-5xl mx-auto px-4 py-6 flex items-center justify-between">
+            <span class="font-display text-xl font-extrabold tracking-tight">Mi<span class="text-marca-500">Sistema</span></span>
+            <nav class="flex gap-5 text-sm">
+                <a href="#paleta" class="hover:text-acento-500 transition">Paleta</a>
+                <a href="#componentes" class="hover:text-acento-500 transition">Componentes</a>
+                <a href="#compilacion" class="hover:text-acento-500 transition">Compilación</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-12">
+
+        <section class="text-center mb-14">
+            <h1 class="font-display text-4xl md:text-5xl font-extrabold mb-4">Sistema de diseño propio</h1>
+            <p class="text-slate-600 max-w-2xl mx-auto">
+                Paleta de tres colores con dos intensidades cada uno y una familia tipográfica,
+                definidas en <code class="bg-white px-1.5 py-0.5 rounded shadow-sm">tailwind.config.js</code>.
+            </p>
+        </section>
+
+        <!-- Paleta -->
+        <section id="paleta" class="mb-16">
+            <h2 class="font-display text-2xl font-bold mb-6">1. Paleta</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+
+                <div class="bg-white rounded-xl shadow overflow-hidden">
+                    <div class="h-20 bg-marca-500"></div>
+                    <div class="p-4 flex items-center justify-between">
+                        <div>
+                            <p class="font-semibold">marca-500</p>
+                            <p class="text-xs text-slate-500">#0e7c70</p>
+                        </div>
+                        <span class="w-6 h-6 rounded-full bg-marca-500 border border-slate-200"></span>
+                    </div>
+                    <div class="px-4 pb-4">
+                        <div class="h-8 rounded bg-marca-700"></div>
+                        <p class="text-xs text-slate-500 mt-1">marca-700 · #094f47</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow overflow-hidden">
+                    <div class="h-20 bg-acento-500"></div>
+                    <div class="p-4 flex items-center justify-between">
+                        <div>
+                            <p class="font-semibold">acento-500</p>
+                            <p class="text-xs text-slate-500">#d97706</p>
+                        </div>
+                        <span class="w-6 h-6 rounded-full bg-acento-500 border border-slate-200"></span>
+                    </div>
+                    <div class="px-4 pb-4">
+                        <div class="h-8 rounded bg-acento-700"></div>
+                        <p class="text-xs text-slate-500 mt-1">acento-700 · #b45309</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow overflow-hidden">
+                    <div class="h-20 bg-tinta-900"></div>
+                    <div class="p-4 flex items-center justify-between">
+                        <div>
+                            <p class="font-semibold">tinta-900</p>
+                            <p class="text-xs text-slate-500">#0f172a</p>
+                        </div>
+                        <span class="w-6 h-6 rounded-full bg-tinta-900 border border-slate-200"></span>
+                    </div>
+                    <div class="px-4 pb-4">
+                        <div class="h-8 rounded bg-tinta-100 border border-slate-200"></div>
+                        <p class="text-xs text-slate-500 mt-1">tinta-100 · #e8edf3</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tipografía -->
+        <section class="mb-16">
+            <h2 class="font-display text-2xl font-bold mb-6">2. Tipografía</h2>
+            <div class="bg-white rounded-xl shadow p-6 space-y-4">
+                <p class="font-display text-3xl font-extrabold">Poppins — display (títulos)</p>
+                <p class="font-sans text-lg">Inter — sans (texto de párrafo): legible en pantallas pequeñas y grandes.</p>
+                <p class="text-sm text-slate-500">
+                    Configurado con <code class="bg-tinta-100 px-1 rounded">fontFamily.display</code> y
+                    <code class="bg-tinta-100 px-1 rounded">fontFamily.sans</code>.
+                </p>
+            </div>
+        </section>
+
+        <!-- Componentes -->
+        <section id="componentes" class="mb-16">
+            <h2 class="font-display text-2xl font-bold mb-6">3. Componentes con la paleta</h2>
+
+            <div class="bg-white rounded-xl shadow p-6 mb-6">
+                <h3 class="font-semibold mb-4">Botones</h3>
+                <div class="flex flex-wrap gap-3">
+                    <button class="bg-marca-500 hover:bg-marca-700 text-white font-semibold px-5 py-2.5 rounded-lg focus:outline-none focus:ring-4 focus:ring-marca-500/40 active:scale-95 transition">
+                        Primario
+                    </button>
+                    <button class="bg-acento-500 hover:bg-acento-700 text-white font-semibold px-5 py-2.5 rounded-lg focus:outline-none focus:ring-4 focus:ring-acento-500/40 active:scale-95 transition">
+                        Acento
+                    </button>
+                    <button class="border-2 border-marca-500 text-marca-700 font-semibold px-5 py-2.5 rounded-lg hover:bg-marca-500 hover:text-white focus:outline-none focus:ring-4 focus:ring-marca-500/30 transition">
+                        Contorno
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <article class="bg-white rounded-xl shadow p-6 hover:shadow-xl transition">
+                    <h3 class="font-display text-xl font-bold mb-2">Tarjeta de servicio</h3>
+                    <p class="text-slate-600 mb-4">Fondo blanco, sombra suave y esquinas de 0.75 rem.</p>
+                    <a href="#" class="text-marca-700 font-semibold hover:text-marca-500 hover:underline focus:outline-none focus:ring-2 focus:ring-marca-500 rounded">Ver detalle</a>
+                </article>
+
+                <article class="bg-marca-700 text-white rounded-xl shadow p-6">
+                    <h3 class="font-display text-xl font-bold mb-2">Tarjeta destacada</h3>
+                    <p class="text-white/80 mb-4">Usa el color de marca en intensidad 700.</p>
+                    <a href="#" class="inline-block bg-acento-500 hover:bg-acento-700 text-white font-semibold px-4 py-2 rounded-lg transition focus:outline-none focus:ring-4 focus:ring-acento-500/40">Comprar</a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Documentación de compilación -->
+        <section id="compilacion" class="mb-6">
+            <h2 class="font-display text-2xl font-bold mb-6">4. Compilación</h2>
+            <div class="bg-tinta-900 text-slate-200 rounded-xl shadow p-6">
+                <p class="text-sm text-slate-400 mb-3">Comando utilizado para generar <code class="text-acento-500">dist/output.css</code>:</p>
+                <pre class="text-sm overflow-x-auto"><code>npm install
+npx tailwindcss -i ./src/input.css -o ./dist/output.css
+
+# Recompilar solo al guardar:
+npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch</code></pre>
+                <p class="text-sm text-slate-400 mt-4">
+                    El CSS generado contiene únicamente las clases usadas en <code class="text-acento-500">index.html</code>:
+                    los colores <code class="text-acento-500">marca</code>, <code class="text-acento-500">acento</code> y
+                    <code class="text-acento-500">tinta</code> existen porque fueron declarados en la configuración.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-tinta-900 text-slate-400 text-sm">
+        <div class="max-w-5xl mx-auto px-4 py-6 text-center">
+            Sistema de diseño — Hojas de Estilo en Cascada Avanzado (UTP), Sesión 15
+        </div>
+    </footer>
+
+</body>
+</html>
